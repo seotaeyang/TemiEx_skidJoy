@@ -33,11 +33,12 @@ public class MainActivity extends AppCompatActivity {
                     float k = 1;
                     @Override
                     public void run(){
+                        // run 반복 시 a만큼 감소
+                        float a = 0.05F;
 
-                        float a = 0.1F;
-                        // robot.skidJoy(1, 0) 실행
                         robot.skidJoy(k,0);
                         k = k - a;
+
                         //500ms 후에 다시 실행
                         handler.postDelayed(this,500);
                     }
